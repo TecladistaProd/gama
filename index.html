@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GAMA - Grupo Amigo dos Animais</title>
+	<link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div id="logo">
+			<h1 class="title is-3 a">Grupo Amigo dos Animais</h1>
+			<h1 class="title is-3 b">Castração a Baixo Custo</h1>
+			<h1 class="title is-3 c">Seja um Colaborador</h1>
+		</div>
+    <div class="tabs">
+      <ul>
+  			<li v-for="x in menu" :class="x.classe"><a :href="'#' + x.nome " @click="clickpagina(x.nome)" v-text="x.pagina"></a></li>
+        <li><a @click="abrir">Facebook GAMA</a></li>
+      </ul>
+		</div>
+    <div class="pagina" id="home" v-show="pg === 'home'">
+			<br/>
+      <h1 class="title is-2">Bem Vindo ao Gama</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quia itaque officia qui, ratione voluptatibus ad aut, temporibus illo blanditiis quis. Id laborum deleniti culpa officia provident iste cum labore.
+      </p>
+			<p>
+	      <em>
+	        Copyright (c) 2017 Copyright Holder All Rights Reserved.
+	      </em>
+			</p>
+			<br/><br/>
+    </div>
+		<div class="pagina" id="sobre" v-show="pg === 'sobre'">
+      <h1 class="title is-2">Gama Grupo Amigo dos Animais</h1>
+			Somos um grupo que valoriza a vida animal e nos preocupamos com o alto índice de animais abandonados, a maioria provenientes de crias indesejadas ou adoção por impulso e sem comprometimento e responsabilidade pela vida adotada.<br/><br/>
+			Iniciamos nossa atividade em 2010 e castramos animais de famílias de baixa renda ou os abandonados nas ruas da cidade.<br/><br/>
+			Pesquisa feita em 2008 nos EUA	 revela que o Brasil é o 2º país que mais tem cães nas ruas, cerca de 30 milhões, ficando atrás somente do EUA. As gatas têm 4 ninhadas por ano, com cerca de 4 filhotes por cria e as cadelas têm das ninhada por ano e uma média de 6 filhotes em cada. Em 6 anos, uma única cadela pode gerar até 40.000 descendentes. Não existem lares responsáveis para todos e a maioria desses animais são abandonados, descartados como brinquedos velhos e apenas conhecem as ruas, a fome, as doenças e os maus tratos.<br/><br/>
+			Com estes números aumentando, nós do GAMA (Grupo Amigo dos Animais), através da venda de rifas, calendários, e outros projetos bem como de contribuições financeiras e ajuda voluntária de pessoas engajadas nesta causa, estamos lutando para diminuir o número de animais abandonados na cidade de Taquaritinga e distritos. Atuando desta forma estamos ainda contribuindo com a saúde pública do Município, uma vez que esta seria a função do centro de zoonoses, órgão que ainda não existe em nossa cidade.<br/><br/>
+			Ajude-nos nesta luta! Colabore com o GAMA para proporcionar melhores condições de vida a todos animais.</p><br/>
+			<p>Gama - Grupo Amigo dos Animais</p>
+			<p>Banco: Caixa Economia Federal</p>
+			<p>Ag. : 0358 Op.: 003</p>
+			<p>C/C : 00001470-4.</p>
+			<br/>
+      <p>Amigo de Verdade colabora !</p>
+      <p>Faça Parte deste movimento ! Acesse o nosso <a @click="abrir" >Facebook !!!</a></p>
+    </div>
+    <div class="pagina" id="post" v-show="pg === 'post'">
+      <h1 class="title is-2">Nossas Postagens</h1>
+      <div style="margin:0 auto; padding:1rem;">
+        <h1 class="subtitle is-4">Meu Card</h1>
+        <p>
+        <img src="imagem/item-1.jpg" style="width:50rem;height:auto;" alt=""/>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus hic eos id illum labore illo! Odit sequi natus nemo in id accusantium officiis illum dignissimos molestias eveniet, doloribus ullam placeat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quaerat dolor, consectetur at nobis culpa pariatur repudiandae! Iure eligendi accusantium quasi doloribus commodi. Natus impedit, necessitatibus esse doloribus nihil minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium distinctio nobis quis, debitis impedit exercitationem. Praesentium atque eaque nobis id, eos, provident quaerat cum necessitatibus ex placeat. Iste, numquam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ducimus voluptates aperiam eveniet tempore commodi quo at quas ipsam expedita consequatur nulla quidem pariatur nihil cum, voluptate vel id suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus similique harum impedit minima unde iusto, cum ratione adipisci cumque libero voluptas sed ab? Labore atque quisquam laudantium ipsam deserunt...<a>{{'Continuar Lendo'}}</a></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
