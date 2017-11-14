@@ -1,0 +1,107 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css');
+.container{margin-left:0}
+[v-cloak]{display: none;}
+#logo{
+	background:linear-gradient(to bottom, #876c10,#c0af55) no-repeat;
+	display:flex;
+	align-items: center;
+	justify-content:center;
+}
+#logo img{
+	max-height:100px;
+}
+#menusite{
+	display:flex;
+	flex-wrap:wrap;
+	font-size:1.3em;
+	flex-direction:left;
+	background:rgba(255, 246, 226, 0.7);
+	position: fixed;
+	z-index:20;
+}
+#menusite li {
+	list-style:none;
+	padding:4px 7px;
+}
+#menusite li:hover{
+	background:rgb(244, 230, 230);
+}
+.ativado{
+	background:rgb(244, 230, 230);
+}
+.ativado a{
+	cursor:initial;
+}
+#menusite li:last-child{
+	padding:0 4px !important;
+}
+#menusite li a{
+	color:#896e12 !important;
+}
+#menusite li a:hover{
+	color:#c0af55 !important;
+}
+#menucelular{
+	z-index:20; display: none;
+	position: fixed;
+}
+#menucell{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:left;
+	background: #c0af55;
+}
+#menucell a{
+	padding:2px 2px;
+	color:rgb(244, 230, 230) !important;
+}
+#esconde{
+	display: none;
+}
+.container .is-fluid .title{
+	color:#00d1b2;
+}
+.container .is-fluid{
+	margin-right:2rem !important;
+	margin-left:2rem !important;
+}
+.container .is-fluid .box{
+	margin:0 auto;
+	width:90%;
+	margin-bottom:5px;
+}
+.container .is-fluid .box h1{
+	text-align:center;
+}
+.carouselitem{
+	justify-content:center;
+	align-items:center;
+	box-shadow:2.5px 3px 5px 0px silver;
+}
+.container .is-fluid .box .btn{
+	margin:0 auto;
+}
+.mao{
+	cursor: pointer;
+}
+.image img{
+	height:inherit;
+}
+.galeria{
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:left;
+	align-items:left;
+	flex-direction:left;
+}
+.galeria span{
+	margin:0 0.6em;
+}
+@media screen and (max-width:720px){
+	#menucelular{
+		display:flex;
+	}
+	#menusite{
+		display: none;
+	}
+}
