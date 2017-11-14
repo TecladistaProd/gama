@@ -8,8 +8,8 @@
   z-index:-1;
   position:fixed;
 }
-.dropdown{
-  position: fixed !important;
+.navbar{
+  position: static !important;
 }
 #logo .subtitle{
   color:white;
@@ -53,8 +53,12 @@
   .tabs{
     display: none !important;
   }
-  .dropdown{
+  .navbar{
+    width:100%;
+    z-index: 50;
     position: fixed !important;
+  }
+  .dropdown{
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
     display: -ms-inline-flex;
