@@ -7,7 +7,8 @@
 	<title>GAMA - Grupo Amigo dos Animais</title>
 	<link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/bulma.min.css">
-  <script src="js/vue.js"></script>
+  <!-- <script src="js/vue.js"></script> -->
+  <script src="js/vue.min.js"></script>
 </head>
 <body>
   <div id="app">
@@ -23,25 +24,30 @@
       </ul>
 		</div>
     <div class="navbar">
-      <div :class="dropdown">
-          <div class="dropdown-trigger">
-            <button class="button navbar-burger" aria-haspopup="true" aria-controls="dropdown-menu4" @click="ativadw" >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-            <div class="dropdown-content">
-              <div v-for="x in menu" class="dropdown-item">
-                <li><a :href="'#' + x.nome " @click="clickpagina(x.nome)" v-text="x.pagina"></a></li>
-                <hr>
-              </div>
-              <div class="dropdown-item">
-                <li><a @click="abrir">Facebook GAMA</a></li>
+      <div class="navbar-brand">
+        <div :class="dropdown">
+            <div class="dropdown-trigger">
+              <button class="button navbar-burger" aria-haspopup="true" aria-controls="dropdown-menu4" @click="ativadw" >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div class="dropdown-content">
+                <div v-for="x in menu" class="dropdown-item">
+                  <li><a :href="'#' + x.nome " @click="clickpagina(x.nome, 1)" v-text="x.pagina"></a></li>
+                  <hr>
+                </div>
+                <div class="dropdown-item">
+                  <li><a @click="abrir">Facebook GAMA</a></li>
+                </div>
               </div>
             </div>
           </div>
+          <h1 class="navbar-item subtitle is-5">
+            {{pgNm}}
+          </h1>
         </div>
       </div>
     <div class="pagina" id="home" v-show="pg === 'home'">
@@ -90,7 +96,7 @@
           <img src="imagem/item-1.jpg" style="width:50rem;height:auto;" alt=""/>
           {{posta.texto | leiaMais(posta.leia.length, posta.leia.sufix)}}
           <br/>
-          <a @click="ler(e)">{{posta.leia.html}}</a>
+          <a @click="ler(e)" class="button">{{posta.leia.html}}</a>
         </p>
       </div>
     </div>

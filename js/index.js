@@ -28,27 +28,28 @@ let app = new Vue({
 			{titulo:'Ataque a Aves Rara', texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus hic eos id illum labore illo! Odit sequi natus nemo in id accusantium officiis illum dignissimos molestias eveniet, doloribus ullam placeat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quaerat dolor, consectetur at nobis culpa pariatur repudiandae! Iure eligendi accusantium quasi doloribus commodi. Natus impedit, necessitatibus esse doloribus nihil minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium distinctio nobis quis, debitis impedit exercitationem. Praesentium atque eaque nobis id, eos, provident quaerat cum necessitatibus ex placeat. Iste, numquam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ducimus voluptates aperiam eveniet tempore commodi quo at quas ipsam expedita consequatur nulla quidem pariatur nihil cum, voluptate vel id suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus similique harum impedit minima unde iusto, cum ratione adipisci cumque libero voluptas sed ab? Labore atque quisquam laudantium ipsam deserunt Aliquam ducimus voluptates aperiam eveniet tempore commodi quo at quas ipsam expedita consequatur nulla quidem pariatur nihil cum, voluptate vel id suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus similique harum impedit minima unde iusto, cum ratione adipisci cumque libero voluptas sed ab? Labore atque quisquam laudantium ipsam deserunt', leia: {length: 250, sufix: '...', html: 'Continue Lendo' }},
 			{titulo:'Besta Quadrada', texto: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus hic eos id illum labore illo! Odit sequi natus nemo in id accusantium officiis illum dignissimos molestias eveniet, doloribus ullam placeat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quaerat dolor, consectetur at nobis culpa pariatur repudiandae! Iure eligendi accusantium quasi doloribus commodi. Natus impedit, necessitatibus esse doloribus nihil minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium distinctio nobis quis, debitis impedit exercitationem. Praesentium atque eaque nobis id, eos, provident quaerat cum necessitatibus ex placeat. Iste, numquam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ducimus voluptates aperiam eveniet tempore commodi quo at quas ipsam expedita consequatur nulla quidem pariatur nihil cum, voluptate vel id suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus similique harum impedit minima unde iusto, cum ratione adipisci cumque libero voluptas sed ab? Labore atque quisquam laudantium ipsam deserunt Aliquam ducimus voluptates aperiam eveniet tempore commodi quo at quas ipsam expedita consequatur nulla quidem pariatur nihil cum, voluptate vel id suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus similique harum impedit minima unde iusto, cum ratione adipisci cumque libero voluptas sed ab? Labore atque quisquam laudantium ipsam deserunt', leia: {length: 250, sufix: '...', html: 'Continue Lendo' }}
 			],
-		dropdown: 'dropdown',
+			pgNm: 'GAMA - Taquaritinga',
+		dropdown: 'dropdown navbar-item',
 		search: ''
 	},
 	mounted(){
-    let n = 0
-    let home = 0
-    for(let x of this.menu){
-      this.menu[n].classe = ''
-      if(location.href.split('#')[1] === x.nome){
-        this.menu[n].classe = 'is-active'
-				this.pg = this.menu[n].nome
-      }
-      else{
-        home++
-      }
-      n++
-    }
-    if(home > 5){
-      this.menu[0].classe = 'is-active'
-    }
-  },
+	    let n = 0
+	    let home = 0
+	    for(let x of this.menu){
+	      this.menu[n].classe = ''
+	      if(location.href.split('#')[1] === x.nome){
+	        this.menu[n].classe = 'is-active'
+					this.pg = this.menu[n].nome
+	      }
+	      else{
+	        home++
+	      }
+	      n++
+	    }
+	    if(home > 5){
+	      this.menu[0].classe = 'is-active'
+	    }
+  	},
 	methods:{
 		tooglemenu: function (){
 			if(this.menucell === 'menucell')
@@ -56,27 +57,30 @@ let app = new Vue({
 			else
 				this.menucell = 'menucell'
 		},
-		clickpagina: function (nome){
+		clickpagina: function (nome, z=null){
 			this.pg = nome
 			let x = location.href.split(/#/)[0]
 			location.href = x + '#' + nome
-      let n = 0
-      for(let a of this.menu){
-        this.menu[n].classe = ''
-        if(a.nome === nome){
-          this.menu[n].classe = 'is-active'
-        }
-        n++
-      }
+		    let n = 0
+		    for(let a of this.menu){
+		      this.menu[n].classe = ''
+		      if(a.nome === nome){
+		        this.menu[n].classe = 'is-active'
+		      }
+		      n++
+		    }
+		    if(z !== null){
+		    	this.ativadw()
+		    }
 		},
 		abrir: function (){
 			window.open('https://www.facebook.com/gama.taquaritinga/?fref=ts', '_blank').focus()
 		},
 		ativadw: function(){
-			if(this.dropdown === 'dropdown'){
-				this.dropdown = 'dropdown is-active'
+			if(this.dropdown === 'dropdown navbar-item'){
+				this.dropdown = 'dropdown navbar-item is-active'
 			} else {
-				this.dropdown = 'dropdown'
+				this.dropdown = 'dropdown navbar-item'
 			}
 		},
 		ler: function(e){

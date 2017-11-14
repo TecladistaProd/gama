@@ -67,6 +67,7 @@
     display: -ms-inline-flex;
     display: -o-inline-flex;
     display: inline-flex;
+    justify-content: center
   }
   .navbar li{
     list-style: none;
