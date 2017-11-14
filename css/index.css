@@ -70,7 +70,7 @@
   height: 15rem;
 }
 .modal{
-  z-index: 100
+  z-index:200 !important;
 }
 .modal .is-success{
   margin:0 auto;
