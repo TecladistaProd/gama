@@ -40,7 +40,6 @@ let app = new Vue({
 	      if(location.href.split('#')[1] === x.nome){
 	        this.menu[n].classe = 'is-active'
 			this.pg = this.menu[n].nome
-			window.scrollTo(0, window.innerHeight*2-100)
 	      }
 	      else{
 	        home++
@@ -70,7 +69,7 @@ let app = new Vue({
 		      }
 		      n++
 		    }
-		    window.scrollTo(0, window.innerHeight*2-100)
+		    window.scrollTo(0, window.innerHeight*2-200)
 		    if(z !== null){
 		    	this.ativadw()
 		    }
