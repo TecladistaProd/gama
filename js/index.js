@@ -39,7 +39,8 @@ let app = new Vue({
 	      this.menu[n].classe = ''
 	      if(location.href.split('#')[1] === x.nome){
 	        this.menu[n].classe = 'is-active'
-					this.pg = this.menu[n].nome
+			this.pg = this.menu[n].nome
+			window.scrollTo(0, window.innerHeight*2)
 	      }
 	      else{
 	        home++
