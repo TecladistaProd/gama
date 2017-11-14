@@ -51,6 +51,7 @@
     display: none !important;
   }
   .dropdown{
+    position: fixed;
     display: -webkit-inline-flex;
     display: -moz-inline-flex;
     display: -ms-inline-flex;
