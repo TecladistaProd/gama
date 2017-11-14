@@ -13,6 +13,7 @@
   z-index: 50;
   background: #fff;
   display: none;
+  position: fixed !important;
 }
 #logo .subtitle{
   color:white;
