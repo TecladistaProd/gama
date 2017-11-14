@@ -9,7 +9,10 @@
   position:fixed;
 }
 .navbar{
-  position: static !important;
+  width:100%;
+  z-index: 50;
+  background: #fff;
+  display: none;
 }
 #logo .subtitle{
   color:white;
@@ -54,9 +57,7 @@
     display: none !important;
   }
   .navbar{
-    width:100%;
-    z-index: 50;
-    position: fixed !important;
+    display: block;
   }
   .dropdown{
     display: -webkit-inline-flex;
