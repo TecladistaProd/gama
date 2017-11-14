@@ -73,6 +73,10 @@ let app = new Vue({
 			}
 		}
 	},
-	computed:{},
+	computed:{
+		filtra: function(){
+			//
+		}
+	},
 	filters:{}
 })

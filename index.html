@@ -34,7 +34,8 @@
           <div class="dropdown-menu" id="dropdown-menu4" role="menu">
             <div class="dropdown-content">
               <div v-for="x in menu" class="dropdown-item">
-                <li :class="x.classe"><a :href="'#' + x.nome " @click="clickpagina(x.nome)" v-text="x.pagina"></a></li>
+                <li><a :href="'#' + x.nome " @click="clickpagina(x.nome)" v-text="x.pagina"></a></li>
+                <hr>
               </div>
               <div class="dropdown-item">
                 <li><a @click="abrir">Facebook GAMA</a></li>
@@ -82,8 +83,9 @@
     </div>
     <div class="pagina" id="post" v-show="pg === 'post'">
       <h1 class="title is-2">Nossas Postagens</h1>
+      <input type="text" class="input" placeholder="Pesquisar" />
       <div style="margin:0 auto; padding:1rem;">
-        <h1 class="subtitle is-4">Meu Card</h1>
+        <h1 class="subtitle is-4">Crimes contra a vida Animal</h1>
         <p>
         <img src="imagem/item-1.jpg" style="width:50rem;height:auto;" alt=""/>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus hic eos id illum labore illo! Odit sequi natus nemo in id accusantium officiis illum dignissimos molestias eveniet, doloribus ullam placeat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quaerat dolor, consectetur at nobis culpa pariatur repudiandae! Iure eligendi accusantium quasi doloribus commodi. Natus impedit, necessitatibus esse doloribus nihil minus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium distinctio nobis quis, debitis impedit exercitationem. Praesentium atque eaque nobis id, eos, provident quaerat cum necessitatibus ex placeat. Iste, numquam, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ducimus voluptates aperiam eveniet tempore commodi quo at quas ipsam expedita consequatur nulla quidem pariatur nihil cum, voluptate vel id suscipit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus similique harum impedit minima unde iusto, cum ratione adipisci cumque libero voluptas sed ab? Labore atque quisquam laudantium ipsam deserunt...<a>{{'Continuar Lendo'}}</a></p>

@@ -58,7 +58,7 @@
     display: none !important;
   }
   .navbar{
-    display: block;
+    display: block !important;
     position: fixed !important;
   }
   .dropdown{
@@ -67,6 +67,13 @@
     display: -ms-inline-flex;
     display: -o-inline-flex;
     display: inline-flex;
+  }
+  .navbar li{
+    list-style: none;
+  }
+  .navbar hr{
+    margin: 0.7rem 0 0 0;
+    width: 100%
   }
   .dropdown:hover{
     background-color: #fff;
