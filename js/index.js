@@ -69,6 +69,7 @@ let app = new Vue({
 		      }
 		      n++
 		    }
+		    window.scrollTo(0, window.innerHeight*2)
 		    if(z !== null){
 		    	this.ativadw()
 		    }
