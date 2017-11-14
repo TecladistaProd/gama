@@ -69,6 +69,9 @@
   width: 15rem;
   height: 15rem;
 }
+.modal{
+  z-index: 100
+}
 .modal .is-success{
   margin:0 auto;
   margin: 0 1rem;
