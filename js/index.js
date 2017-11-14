@@ -1,4 +1,3 @@
-
 let app = new Vue({
 	el: '#app',
 	data:{
@@ -21,7 +20,14 @@ let app = new Vue({
 		pg:'home',
 		galeria:[
 			{nome:'Ivo', src:'imgal/Ivo.jpg', hist:'Ivo foi encontrado  filhote em uma movimentada avenida da cidade. Como tinha coleira quem o encontrou pediu a  amiga que o abrigasse até achar seu tutor, Ivo tremia muito e se arrastava, não conseguia ficar em pé e na consulta foi constatado problemas neurológicos. Seu antigo “tutor” não apareceu. Ivo foi adotado, apesar da sua dificuldade de locomoção vive e harmonia numa família com sete “irmãos”'},
-			{nome:'Pluto', src:'imgal/Pluto.jpg', hist:'Pluto é um cão idoso,era feliz com seu dono até os 10 anos,o tutor morreu e os vizinhos o alimentavam.Foi agredido,então 4 amigas pegaram a tutela.Após 3 anos foi adotado,e depois resgatado de novo por maus tratos,desnutrido e debilitado,hoje vive feliz e tranquilo com sua amiga e tutora.Nunca abandone um cão idoso.'}
+			{nome:'Pluto', src:'imgal/Pluto.jpg', hist:'Pluto é um cão idoso,era feliz com seu dono até os 10 anos,o tutor morreu e os vizinhos o alimentavam.Foi agredido,então 4 amigas pegaram a tutela.Após 3 anos foi adotado,e depois resgatado de novo por maus tratos,desnutrido e debilitado,hoje vive feliz e tranquilo com sua amiga e tutora.Nunca abandone um cão idoso.'},
+			{nome:'Jona', src:'imgal/Jona.jpg', hist:'Sou Jona, sou toda colorida e muito feliz, fui abandonada ainda bebê com o cordão ambilical ainda sangrando. Cuidada com muito amor hoje sou saudável e tratada como uma rainha.'},
+			{nome:'Ivo1', src:'imgal/Ivo.jpg', hist:'Ivo foi encontrado  filhote em uma movimentada avenida da cidade. Como tinha coleira quem o encontrou pediu a  amiga que o abrigasse até achar seu tutor, Ivo tremia muito e se arrastava, não conseguia ficar em pé e na consulta foi constatado problemas neurológicos. Seu antigo “tutor” não apareceu. Ivo foi adotado, apesar da sua dificuldade de locomoção vive e harmonia numa família com sete “irmãos”'},
+			{nome:'Pluto1', src:'imgal/Pluto.jpg', hist:'Pluto é um cão idoso,era feliz com seu dono até os 10 anos,o tutor morreu e os vizinhos o alimentavam.Foi agredido,então 4 amigas pegaram a tutela.Após 3 anos foi adotado,e depois resgatado de novo por maus tratos,desnutrido e debilitado,hoje vive feliz e tranquilo com sua amiga e tutora.Nunca abandone um cão idoso.'},
+			{nome:'Jona1', src:'imgal/Jona.jpg', hist:'Sou Jona, sou toda colorida e muito feliz, fui abandonada ainda bebê com o cordão ambilical ainda sangrando. Cuidada com muito amor hoje sou saudável e tratada como uma rainha.'},
+			{nome:'Ivo2', src:'imgal/Ivo.jpg', hist:'Ivo foi encontrado  filhote em uma movimentada avenida da cidade. Como tinha coleira quem o encontrou pediu a  amiga que o abrigasse até achar seu tutor, Ivo tremia muito e se arrastava, não conseguia ficar em pé e na consulta foi constatado problemas neurológicos. Seu antigo “tutor” não apareceu. Ivo foi adotado, apesar da sua dificuldade de locomoção vive e harmonia numa família com sete “irmãos”'},
+			{nome:'Pluto2', src:'imgal/Pluto.jpg', hist:'Pluto é um cão idoso,era feliz com seu dono até os 10 anos,o tutor morreu e os vizinhos o alimentavam.Foi agredido,então 4 amigas pegaram a tutela.Após 3 anos foi adotado,e depois resgatado de novo por maus tratos,desnutrido e debilitado,hoje vive feliz e tranquilo com sua amiga e tutora.Nunca abandone um cão idoso.'}
+
 		],
 		postagem: [
 			{titulo:'Benefícios da Castração a vida de seu Animalzinho', texto: `1 – Cadelas e gatas castradas antes do primeiro cio têm mínimas chances de desenvolverem tumores de mama quando se tornarem idosas. O tumor de mama é o câncer mais comum nesses animais. Além disso, o procedimento evita totalmente a possibilidade de tumores de ovário e útero. 2 – As fêmeas não ficam mais vulneráveis a infecções uterinas graves, já que o seu aparelho reprodutor é removido. 3 – A castração previne totalmente a incidência de tumores testiculares, diminui consideravelmente o câncer de próstata, as hérnias perineais e a hipertrofia prostática, comum em machos idosos. Essas doenças frequentemente causam infecções e outros distúrbios urinários. 4 – O animal geralmente torna-se mais comportado, diminuindo as fugas, brigas e os atropelamentos. 5 – No macho, diminuem a marcação de território através da urina e a mania de montar, no caso dos cachorros. Para o cão de guarda será ainda melhor, pois ele vai se preocupar menos com cachorras no cio, concentrando sua atenção na casa e na família. 6 – Nos gatos, reduz a incidência da AIDS felina. Os gatos podem ser portadores do FIV (vírus da imunodeficiência felina), levando a uma síndrome semelhante à humana. O vírus é transmitido pelo cruzamento e por mordidas. Vale ressaltar que a AIDS felina é específica dos gatos e não pode ser transmitida ao homem de forma alguma, nem por mordidas, arranhões, lambidas ou contato com o sangue, urina, saliva e fezes dos gatos. 7- As fêmeas não entram mais no cio, poupando os tutores de lidar com o sangramento e com possíveis cães de rua importunando. 8 – Seu animal de estimação pode ficar mais dócil, facilitando a interação e reduzindo situações problemáticas – especialmente entre os que tinham comportamento agressivo antes. 9 – Elimina a gravidez psicológica que afeta algumas fêmeas após o cio, quando acontece o inchaço das mamas e pode causar irritação. 10 – A expectativa de vida dos cães castrados é maior. Os machos castrados, em geral, vivem aproximadamente 14% a mais.`, leia: {length: 250, sufix: '...', html: 'Continue Lendo' }},
@@ -30,6 +36,8 @@ let app = new Vue({
 			],
 			pgNm: 'GAMA - Taquaritinga',
 		dropdown: 'dropdown navbar-item',
+		modal: 'modal',
+		galInf: {},
 		search: ''
 	},
 	mounted(){
@@ -69,7 +77,7 @@ let app = new Vue({
 		      }
 		      n++
 		    }
-		    window.scrollTo(0, window.innerHeight*2-200)
+		    window.scrollTo(0, window.innerHeight*2-270)
 		    if(z !== null){
 		    	this.ativadw()
 		    }
@@ -94,6 +102,36 @@ let app = new Vue({
 				this.filtra[e].leia.sufix = '...'
 				this.filtra[e].leia.html = 'Continue Lendo'
 				
+			}
+		},
+		abrirModal: function(e){
+			if(e === '+1'){
+				let x = 0
+				while(this.galInf.nome !== this.galeria[x].nome){
+					x++
+				}
+				x++
+				if(this.galeria[x] !== undefined){
+					this.galInf = this.galeria[x]
+				} else {
+					this.galInf = this.galeria[0]
+				}
+			} else if(e === '-1'){
+				let x = this.galeria.length - 1
+				while(this.galInf.nome !== this.galeria[x].nome){
+					x = x - 1
+				}
+				if(x > 0){
+					x = x - 1
+				} else {
+					x = this.galeria.length - 1
+				}
+				this.galInf = this.galeria[x]
+			} else {
+				this.galInf = this.galeria[e]
+				if(this.modal = 'modal'){
+					this.modal += ' is-active'
+				}
 			}
 		}
 	},

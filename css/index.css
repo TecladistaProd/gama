@@ -1,6 +1,9 @@
 #app{
   overflow: auto;
 }
+[v-cloak]{
+  display: none;
+}
 #logo{
   background:url("../logo.jpg") no-repeat center scroll;
   width:100%;
@@ -30,6 +33,7 @@
   from{opacity: 0}
   to{opacity: 1}
 }
+
 .tabs{
   background:#fff;
   position: fixed;
@@ -41,13 +45,31 @@
 }
 .pagina{
   min-height:10rem;
-  margin-top:45rem;
+  margin-top:49rem;
   padding:2rem;
   background:#fff;
 }
 #sobre .is-2{
   color:#52acb1;
 }
+.galeria{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content:space-around;
+
+  flex-wrap:wrap;
+}
+.galeria .box{
+  margin:1.7rem;
+  padding: 10px;
+}
+.img{
+  border-radius: 10%;
+  width: 15rem;
+  height: 15rem;
+}
+
 @media screen and (max-width: 800px){
   #logo .subtitle{
     font-size:2.1rem;
