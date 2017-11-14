@@ -69,6 +69,14 @@
   width: 15rem;
   height: 15rem;
 }
+.modal .is-success{
+  margin:0 auto;
+  margin: 0 1rem;
+}
+.modal-card-body img{
+  width: 30rem;
+  height:20rem;
+}
 
 @media screen and (max-width: 800px){
   #logo .subtitle{
