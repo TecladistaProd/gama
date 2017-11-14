@@ -12,9 +12,9 @@
 <body>
   <div id="app">
     <div id="logo">
-			<h1 class="title is-3 a">Grupo Amigo dos Animais</h1>
-			<h1 class="title is-3 b">Castração a Baixo Custo</h1>
-			<h1 class="title is-3 c">Seja um Colaborador</h1>
+			<h1 class="subtitle is-3">Grupo Amigo dos Animais</h1>
+			<h1 class="subtitle is-3">Castração a Baixo Custo</h1>
+			<h1 class="subtitle is-3">Seja um Colaborador</h1>
 		</div>
     <div class="tabs">
       <ul>
@@ -22,6 +22,25 @@
         <li><a @click="abrir">Facebook GAMA</a></li>
       </ul>
 		</div>
+    <div :class="dropdown">
+        <div class="dropdown-trigger">
+          <button class="button navbar-burger" aria-haspopup="true" aria-controls="dropdown-menu4" @click="ativadw" >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div v-for="x in menu" class="dropdown-item">
+              <li :class="x.classe"><a :href="'#' + x.nome " @click="clickpagina(x.nome)" v-text="x.pagina"></a></li>
+            </div>
+            <div class="dropdown-item">
+              <li><a @click="abrir">Facebook GAMA</a></li>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="pagina" id="home" v-show="pg === 'home'">
 			<br/>
       <h1 class="title is-2">Bem Vindo ao Gama</h1>

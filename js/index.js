@@ -1,20 +1,3 @@
-Vue.component('array',{
-	template: `
-	<span>
-		<h1>Seja Bem Vindo</h1>
-		<ol>
-			<li v-for="nome of batatinha" v-html="nome"></li>
-		</ol>
-	<span>
-	`,
-	props:{
-		batatinha:{
-			required: true,
-			type:Array
-		}
-	}
-})
-
 let app = new Vue({
 	el: '#app',
 	data:{
@@ -39,8 +22,7 @@ let app = new Vue({
 		{nome:'Ivo', src:'imgal/Ivo.jpg', hist:'Ivo foi encontrado  filhote em uma movimentada avenida da cidade. Como tinha coleira quem o encontrou pediu a  amiga que o abrigasse até achar seu tutor, Ivo tremia muito e se arrastava, não conseguia ficar em pé e na consulta foi constatado problemas neurológicos. Seu antigo “tutor” não apareceu. Ivo foi adotado, apesar da sua dificuldade de locomoção vive e harmonia numa família com sete “irmãos”'},
 		{nome:'Pluto', src:'imgal/Pluto.jpg', hist:'Pluto é um cão idoso,era feliz com seu dono até os 10 anos,o tutor morreu e os vizinhos o alimentavam.Foi agredido,então 4 amigas pegaram a tutela.Após 3 anos foi adotado,e depois resgatado de novo por maus tratos,desnutrido e debilitado,hoje vive feliz e tranquilo com sua amiga e tutora.Nunca abandone um cão idoso.'}
 		],
-		nome: null,
-		nomes: ['<strong>Vitor</strong>', 'Matheus', 'Amanda', 'Luis']
+		dropdown: 'dropdown'
 	},
 	mounted(){
     let n = 0
@@ -82,6 +64,13 @@ let app = new Vue({
 		},
 		abrir: function (){
 			window.open('https://www.facebook.com/gama.taquaritinga/?fref=ts', '_blank').focus()
+		},
+		ativadw: function(){
+			if(this.dropdown === 'dropdown'){
+				this.dropdown = 'dropdown is-active'
+			} else {
+				this.dropdown = 'dropdown'
+			}
 		}
 	},
 	computed:{},
