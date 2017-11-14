@@ -59,6 +59,7 @@
   }
   .navbar{
     display: block;
+    position: fixed !important;
   }
   .dropdown{
     display: -webkit-inline-flex;
