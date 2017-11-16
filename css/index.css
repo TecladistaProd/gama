@@ -1,115 +1,115 @@
 #app{
-  overflow: auto;
+	overflow: auto;
 }
 [v-cloak]{
-  display: none;
+	display: none;
 }
 #logo{
-  background:url("../logo.jpg") no-repeat center scroll;
-  width:100%;
-  height:100%;
-  z-index:-1;
-  position:fixed;
+	background:url("../logo.jpg") no-repeat center scroll;
+	width:100%;
+	height:100%;
+	z-index:-1;
+	position:fixed;
 }
 .navbar{
-  width:100%;
-  z-index: 50;
-  background: #fff;
-  display: none !important;
-  position: fixed !important;
+	width:100%;
+	z-index: 50;
+	background: #fff;
+	display: none !important;
+	position: fixed !important;
 }
 #logo .subtitle{
-  color:white;
-  font-size:2.5rem;
-  left:0;
-  opacity:1;
-  animation: name 3s;
-  margin:6.5rem;
-  margin-right: 0;
-  margin-left:3rem;
-  text-shadow: 0 1px 8px white;
+	color:white;
+	font-size:2.5rem;
+	left:0;
+	opacity:1;
+	animation: name 3s;
+	margin:6.5rem;
+	margin-right: 0;
+	margin-left:3rem;
+	text-shadow: 0 1px 8px white;
 }
 @keyframes name {
-  from{opacity: 0}
-  to{opacity: 1}
+	from{opacity: 0}
+	to{opacity: 1}
 }
 
 .tabs{
-  background:#fff;
-  position: fixed;
-  width:100%;
-  z-index:10;
+	background:#fff;
+	position: fixed;
+	width:100%;
+	z-index:10;
 }
 .dropdown{
-  display: none;
+	display: none;
 }
 .pagina{
-  min-height:10rem;
-  margin-top:49rem;
-  padding:2rem;
-  background:#fff;
+	min-height:10rem;
+	margin-top:49rem;
+	padding:2rem;
+	background:#fff;
 }
 #sobre .is-2{
-  color:#52acb1;
+	color:#52acb1;
 }
 .galeria{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content:space-around;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-content:space-around;
 
-  flex-wrap:wrap;
+	flex-wrap:wrap;
 }
 .galeria .box{
-  margin:1.7rem;
-  padding: 10px;
+	margin:1.7rem;
+	padding: 10px;
 }
 .img{
-  border-radius: 10%;
-  width: 15rem;
-  height: 15rem;
+	border-radius: 10%;
+	width: 15rem;
+	height: 15rem;
 }
 .modal{
-  z-index:200 !important;
+	z-index:200 !important;
 }
 .modal .is-success{
-  margin:0 auto;
-  margin: 0 1rem;
+	margin:0 auto;
+	margin: 0 1rem;
 }
 .modal-card-body img{
-  width: 30rem;
-  height:20rem;
+	width: 30rem;
+	height:20rem;
 }
 
 @media screen and (max-width: 800px){
-  #logo .subtitle{
-    font-size:2.1rem;
-    margin:5.6rem;
-    margin-left:2.7rem;
-  }
-  .tabs{
-    display: none !important;
-  }
-  .navbar{
-    display: block !important;
-    position: fixed !important;
-  }
-  .dropdown{
-    display: -webkit-inline-flex;
-    display: -moz-inline-flex;
-    display: -ms-inline-flex;
-    display: -o-inline-flex;
-    display: inline-flex;
-    justify-content: center
-  }
-  .navbar li{
-    list-style: none;
-  }
-  .navbar hr{
-    margin: 0.7rem 0 0 0;
-    width: 100%
-  }
-  .dropdown:hover{
-    background-color: #fff;
-  }
+	#logo .subtitle{
+		font-size:2.1rem;
+		margin:5.6rem;
+		margin-left:2.7rem;
+	}
+	.tabs{
+		display: none !important;
+	}
+	.navbar{
+		display: block !important;
+		position: fixed !important;
+	}
+	.dropdown{
+		display: -webkit-inline-flex;
+		display: -moz-inline-flex;
+		display: -ms-inline-flex;
+		display: -o-inline-flex;
+		display: inline-flex;
+		justify-content: center
+	}
+	.navbar li{
+		list-style: none;
+	}
+	.navbar hr{
+		margin: 0.7rem 0 0 0;
+		width: 100%
+	}
+	.dropdown:hover{
+		background-color: #fff;
+	}
 }

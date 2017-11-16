@@ -6,73 +6,73 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>GAMA - Grupo Amigo dos Animais</title>
 	<link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/bulma.min.css">
-  <!--  <script src="js/vue.js"></script> -->
-  <script src="js/vue.min.js"></script>
+	<link rel="stylesheet" href="css/bulma.min.css">
+	<!-- <script src="js/vue.js"></script> -->
+	<script src="js/vue.min.js"></script>
 </head>
 <body>
-  <div id="app" v-cloak>
-    <div id="logo">
+	<div id="app" v-cloak>
+		<div id="logo">
 			<h1 class="subtitle is-3">Grupo Amigo dos Animais</h1>
 			<h1 class="subtitle is-3">Castração a Baixo Custo</h1>
 			<h1 class="subtitle is-3">Seja um Colaborador</h1>
 		</div>
-    <div class="tabs">
-      <ul>
-  			<li v-for="x in menu" :class="x.classe"><a :href="'#' + x.nome " @click="clickpagina(x.nome)" v-text="x.pagina"></a></li>
-        <li><a @click="abrir">Facebook GAMA</a></li>
-      </ul>
+		<div class="tabs">
+			<ul>
+				<li v-for="x in menu" :class="x.classe"><a :href="'#' + x.nome " @click="clickpagina(x.nome)" v-text="x.pagina"></a></li>
+				<li><a @click="abrir">Facebook GAMA</a></li>
+			</ul>
 		</div>
-    <div class="navbar">
-      <div class="navbar-brand">
-        <div :class="dropdown">
-            <div class="dropdown-trigger">
-              <button class="button navbar-burger" aria-haspopup="true" aria-controls="dropdown-menu4" @click="ativadw" >
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div v-for="x in menu" class="dropdown-item">
-                  <li><a :href="'#' + x.nome " @click="clickpagina(x.nome, 1)" v-text="x.pagina"></a></li>
-                  <hr>
-                </div>
-                <div class="dropdown-item">
-                  <li><a @click="abrir">Facebook GAMA</a></li>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h1 class="navbar-item subtitle is-5">
-            {{pgNm}}
-          </h1>
-        </div>
-      </div>
-    <div class="pagina" id="home" v-show="pg === 'home'">
-      <h1 class="title is-2">Bem Vindo ao Gama</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <br/>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quia itaque officia qui, ratione voluptatibus ad aut, temporibus illo blanditiis quis. Id laborum deleniti culpa officia provident iste cum labore.
-      </p>
-      <br/>
-        <em>
-          Copyright (c) 2017 Copyright Holder All Rights Reserved.
-        </em>
+		<div class="navbar">
+			<div class="navbar-brand">
+				<div :class="dropdown">
+						<div class="dropdown-trigger">
+							<button class="button navbar-burger" aria-haspopup="true" aria-controls="dropdown-menu4" @click="ativadw" >
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="dropdown-menu" id="dropdown-menu4" role="menu">
+							<div class="dropdown-content">
+								<div v-for="x in menu" class="dropdown-item">
+									<li><a :href="'#' + x.nome " @click="clickpagina(x.nome, 1)" v-text="x.pagina"></a></li>
+									<hr>
+								</div>
+								<div class="dropdown-item">
+									<li><a @click="abrir">Facebook GAMA</a></li>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h1 class="navbar-item subtitle is-5">
+						{{pgNm}}
+					</h1>
+				</div>
+			</div>
+		<div class="pagina" id="home" v-show="pg === 'home'">
+			<h1 class="title is-2">Bem Vindo ao Gama</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<br/>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quia itaque officia qui, ratione voluptatibus ad aut, temporibus illo blanditiis quis. Id laborum deleniti culpa officia provident iste cum labore.
+			</p>
+			<br/>
+				<em>
+					Copyright (c) 2017 Copyright Holder All Rights Reserved.
+				</em>
 			<br/><br/>
-    </div>
+		</div>
 		<div class="pagina" id="sobre" v-show="pg === 'sobre'">
-      <h1 class="title is-2">Gama Grupo Amigo dos Animais</h1>
+			<h1 class="title is-2">Gama Grupo Amigo dos Animais</h1>
 			Somos um grupo que valoriza a vida animal e nos preocupamos com o alto índice de animais abandonados, a maioria provenientes de crias indesejadas ou adoção por impulso e sem comprometimento e responsabilidade pela vida adotada.<br/><br/>
 			Iniciamos nossa atividade em 2010 e castramos animais de famílias de baixa renda ou os abandonados nas ruas da cidade.<br/><br/>
 			Pesquisa feita em 2008 nos EUA	 revela que o Brasil é o 2º país que mais tem cães nas ruas, cerca de 30 milhões, ficando atrás somente do EUA. As gatas têm 4 ninhadas por ano, com cerca de 4 filhotes por cria e as cadelas têm das ninhada por ano e uma média de 6 filhotes em cada. Em 6 anos, uma única cadela pode gerar até 40.000 descendentes. Não existem lares responsáveis para todos e a maioria desses animais são abandonados, descartados como brinquedos velhos e apenas conhecem as ruas, a fome, as doenças e os maus tratos.<br/><br/>
@@ -83,49 +83,49 @@
 			<p>Ag. : 0358 Op.: 003</p>
 			<p>C/C : 00001470-4.</p>
 			<br/>
-      <p>Amigo de Verdade colabora !</p>
-      <p>Faça Parte deste movimento ! Acesse o nosso <a @click="abrir" >Facebook !!!</a></p>
-    </div>
-    <div class="pagina" id="post" v-show="pg === 'post'">
-      <h1 class="title is-2">Nossas Postagens</h1>
-      <input type="text" class="input" placeholder="Pesquisar" v-model="search" />
-      <div style="margin:0 auto; padding:1rem;" v-for="posta, e in filtra">
-        <h1 class="subtitle is-4">{{posta.titulo}}</h1>
-        <p>
-          <img src="imagem/item-1.jpg" style="width:50rem;height:auto;" alt=""/>
-          {{posta.texto | leiaMais(posta.leia.length, posta.leia.sufix)}}
-          <br/>
-          <a @click="ler(e)" class="button">{{posta.leia.html}}</a>
-        </p>
-      </div>
-    </div>
-    <div class="pagina" id="galeria" v-show="pg === 'galeria'">
-      <div class="galeria">
-        <a class="box" v-for="gal, key in galeria" @click="abrirModal(key)">
-          <img :src="gal.src" :alt="gal.nome" class="img" />
-        </a>
-        <div :class="modal">
-          <div class="modal-background"></div>
-          <div class="modal-card">
-            <header class="modal-card-head">
-              <p class="modal-card-title">{{galInf.nome}}</p>
-              <div class="modal-card-title">
-                <button class="button is-success" @click="abrirModal('-1')"><</button>
-                <button class="button is-success" @click="abrirModal('+1')">></button>
-              </div>
-              <button class="delete" aria-label="close" @click="modal = 'modal'"></button>
-            </header>
-            <section class="modal-card-body">
-              <img :src="galInf.src"/>
-            </section>
-            <footer class="modal-card-foot">
-              <p>{{galInf.hist}}</p>
-            </footer>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="js/index.js"></script>
+			<p>Amigo de Verdade colabora !</p>
+			<p>Faça Parte deste movimento ! Acesse o nosso <a @click="abrir" >Facebook !!!</a></p>
+		</div>
+		<div class="pagina" id="post" v-show="pg === 'post'">
+			<h1 class="title is-2">Nossas Postagens</h1>
+			<input type="text" class="input" placeholder="Pesquisar" v-model="search" />
+			<div style="margin:0 auto; padding:1rem;" v-for="posta, e in filtra">
+				<h1 class="subtitle is-4">{{posta.titulo}}</h1>
+				<p>
+					<img src="imagem/item-1.jpg" style="width:50rem;height:auto;" alt=""/>
+					{{posta.texto | leiaMais(posta.leia.length, posta.leia.sufix)}}
+					<br/>
+					<a @click="ler(e)" class="button">{{posta.leia.html}}</a>
+				</p>
+			</div>
+		</div>
+		<div class="pagina" id="galeria" v-show="pg === 'galeria'">
+			<div class="galeria">
+				<a class="box" v-for="gal, key in galeria" @click="abrirModal(key)">
+					<img :src="gal.src" :alt="gal.nome" class="img" />
+				</a>
+				<div :class="modal">
+					<div class="modal-background"></div>
+					<div class="modal-card">
+						<header class="modal-card-head">
+							<p class="modal-card-title">{{galInf.nome}}</p>
+							<div class="modal-card-title">
+								<button class="button is-success" @click="abrirModal('-1')"><</button>
+								<button class="button is-success" @click="abrirModal('+1')">></button>
+							</div>
+							<button class="delete" aria-label="close" @click="modal = 'modal'"></button>
+						</header>
+						<section class="modal-card-body">
+							<img :src="galInf.src"/>
+						</section>
+						<footer class="modal-card-foot">
+							<p>{{galInf.hist}}</p>
+						</footer>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/index.js"></script>
 </body>
 </html>
