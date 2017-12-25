@@ -93,8 +93,9 @@
 				<h1 class="subtitle is-4">{{posta.titulo}}</h1>
 				<p>
 					<img src="imagem/item-1.jpg" style="width:50rem;height:auto;" alt=""/>
-					{{posta.texto | leiaMais(posta.leia.length, posta.leia.sufix)}}
-					<br/>
+					<p>
+						{{posta.texto | leiaMais(posta.leia.length, posta.leia.sufix)}}
+					</p>
 					<a @click="ler(e)" class="button">{{posta.leia.html}}</a>
 				</p>
 			</div>
