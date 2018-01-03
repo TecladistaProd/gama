@@ -34,6 +34,9 @@
 	font-size:.95em;
 	color:gray;
 }
+input::placeholder{
+	color:gray;
+}
 @keyframes name {
 	from{opacity: 0}
 	to{opacity: 1}
