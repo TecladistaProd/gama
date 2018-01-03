@@ -34,9 +34,6 @@
 	font-size:.95em;
 	color:gray;
 }
-.input::placeholder, .input::-webkit-input-placeholder, .input::-moz-placeholder, .input:-ms-input-placeholder, .input:-moz-placeholder{
-	color:gray !important;
-}
 @keyframes name {
 	from{opacity: 0}
 	to{opacity: 1}
