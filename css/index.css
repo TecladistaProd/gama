@@ -29,6 +29,11 @@
 	margin-left:3rem;
 	text-shadow: 0 1px 8px white;
 }
+.not{
+	font-weight:normal;
+	font-size:.5em;
+	color:gray;
+}
 @keyframes name {
 	from{opacity: 0}
 	to{opacity: 1}
