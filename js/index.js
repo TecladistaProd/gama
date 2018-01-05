@@ -1,3 +1,13 @@
+bounty({
+  el: '.js-bounty',
+  value: 2500,
+  initialValue: 0,
+  lineHeight: 1.35,
+  letterSpacing: 1,
+  animationDelay: 100,
+  letterAnimationDelay: 100
+})
+
 let app = new Vue({
 	el: '#app',
 	data:{
@@ -152,13 +162,3 @@ let app = new Vue({
 		}
 	}
 })
-
-bounty({
-  el: '.js-bounty',
-  value: '2500',
-  initialValue: '0',
-  lineHeight: 1.35,
-  letterSpacing: 1,
-  animationDelay: 100,
-  letterAnimationDelay: 100
-});
