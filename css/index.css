@@ -8,7 +8,6 @@
   font-size: 60px;
   font-family: Roboto;
   fill: #fff;
-  text-shadow: 1px 1px 5px rgba(120, 100, 100, 0.5);
 }
 #logo{
 	background:url("../logo.jpg") no-repeat center scroll;
@@ -16,6 +15,11 @@
 	height:100%;
 	z-index:-1;
 	position:fixed;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding:2rem;
 }
 .navbar{
 	width:100%;
@@ -34,6 +38,17 @@
 	margin-right: 0;
 	margin-left:3rem;
 	text-shadow: 0 1px 8px white;
+}
+#logo .esquerda {
+	margin-top: 15vh;
+	text-shadow: 0 1px 8px white;
+}
+#logo .js-bounty{
+	text-shadow: 0 1px 8px white;
+}
+#logo .esquerda .title{
+	color:white;
+	font-weight: normal;
 }
 .not{
 	font-weight:normal;
@@ -100,7 +115,13 @@
 }
 
 @media screen and (max-width: 800px){
+	#logo{
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+	}
 	#logo .subtitle{
+		display: none;
 		font-size:2.1rem;
 		margin:5.6rem;
 		margin-left:2.7rem;
