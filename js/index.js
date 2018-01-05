@@ -153,4 +153,4 @@ let app = new Vue({
 	}
 })
 
-bounty.default({ el: '.js-bounty', value: 10000, lineHeight: 1.5, letterSpacing: 1, animationDelay: 200, letterAnimationDelay: 550 })
+bounty.default({ el: '.js-bounty', value: '100.000', lineHeight: 1.5, letterSpacing: 1, animationDelay: 200, letterAnimationDelay: 550 })
