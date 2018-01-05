@@ -4,6 +4,12 @@
 [v-cloak]{
 	display: none;
 }
+.js-bounty {
+  font-size: 60px;
+  font-family: Roboto;
+  fill: #fff;
+  text-shadow: 1px 1px 5px rgba(120, 100, 100, 0.5);
+}
 #logo{
 	background:url("../logo.jpg") no-repeat center scroll;
 	width:100%;
