@@ -101,7 +101,7 @@ let app = new Vue({
 				this.filtra[e].leia.length = 250
 				this.filtra[e].leia.sufix = '...'
 				this.filtra[e].leia.html = 'Continue Lendo'
-				
+
 			}
 		},
 		abrirModal: function(e){
@@ -152,3 +152,13 @@ let app = new Vue({
 		}
 	}
 })
+
+bounty({
+  el: '.js-bounty',
+  value: '2500',
+  initialValue: '0',
+  lineHeight: 1.35,
+  letterSpacing: 1,
+  animationDelay: 100,
+  letterAnimationDelay: 100
+});
