@@ -4,14 +4,85 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GAMA - Grupo Amigo dos Animais</title>
-	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/bulma.min.css">
+	<title>Página Administrativa</title>
+    <!-- link rel="stylesheet" href="css/index.css" -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
 	<!-- <script src="js/vue.js"></script> -->
-	<script src="js/vue.min.js"></script>
+    <script src="js/vue.min.js"></script>
 </head>
 <body>
-    <div id="app"></div>
-    <script></script>
+    <div id="app" class="container">
+        <br/>
+        <form class="box">
+            <span class="has-text-centered">
+                <h1 class="subtitle is-3">Página Inicial</h1>
+            </span>
+            <label class="label">
+                Título:
+                <input type="text" class="input" placeholder="Título da Página Inicial"/>
+            </label>
+            <label class="label">
+                Texto:
+                <textarea class="textarea" placeholder="Texto da Página..."></textarea>
+            </label>
+            <input type="button" class="button is-success" value="Alterar"/>
+            <input type="reset" class="button is-warning" value="Limpar"/>
+        </form>
+        <br/>
+        <form class="box">
+            <span class="has-text-centered">
+                <h1 class="subtitle is-3">História do Gama</h1>
+            </span>
+            <label class="label">
+                Título:
+                <input type="text" class="input" placeholder="Título"/>
+            </label>
+            <label class="label">
+                Texto:
+                <textarea class="textarea" placeholder="Texto da Página..."></textarea>
+            </label>
+            <input type="button" class="button is-success" value="Alterar"/>
+            <input type="reset" class="button is-warning" value="Limpar"/>
+        </form>
+        <br/>
+        <form class="box" id="as">
+            <span class="has-text-centered">
+                <h1 class="subtitle is-3">Postagens e Eventos</h1>
+            </span>
+            <label class="label">
+                Título:
+                <input type="text" class="input" placeholder="Título"/>
+            </label>
+            <label class="file-label">
+                <input class="file-input" type="file" name="resume">
+                <span class="file-cta">
+                    <span class="file-icon"><i class="fa fa-cloud-upload" aria-hidden="true"></i></span>
+                    <span class="file-label">Escolher Imagem… </span>
+                </span>
+            </label>
+            <label class="label">
+                Texto:
+                <textarea class="textarea" placeholder="Texto da Postagem..."></textarea>
+            </label>
+            <input type="button" class="button is-success" value="Adicionar"/>
+            <input type="reset" class="button is-warning" value="Limpar"/>
+        </form>
+        <br/>
+    </div>
+    <script>
+        (function(){
+            let fileName = document.querySelector('span.file-label')
+            document.querySelector('input[type=file]').addEventListener('change', e=>{
+                if((/\.(gif|jpg|jpeg|tiff|png)$/i).test(e.target.files[0].name))
+                    fileName.innerHTML = e.target.files[0].name
+                else
+                    e.target.value = ''
+            })
+            document.querySelector('#as').addEventListener('reset', e=>{
+                fileName.innerHTML= 'Escolher Imagem… '
+            })
+        })()
+    </script>
 </body>
 </html>
